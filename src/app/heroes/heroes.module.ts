@@ -1,3 +1,4 @@
+import { HeroesRoutingModule } from './heroes-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AgregarComponent } from './pages/agregar/agregar.component';
@@ -6,18 +7,14 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListarComponent } from './pages/listar/listar.component';
 
-
-
 @NgModule({
   declarations: [
     AgregarComponent,
     BuscarComponent,
     HeroeComponent,
     HomeComponent,
-    ListarComponent
+    ListarComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule, HeroesRoutingModule],
 })
-export class HeroesModule { }
+export class HeroesModule {}
