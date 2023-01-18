@@ -9,6 +9,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListarComponent } from './pages/listar/listar.component';
+import { HeroesTarjetaComponent } from './components/heroes-tarjeta/heroes-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ListarComponent } from './pages/listar/listar.component';
     HeroeComponent,
     HomeComponent,
     ListarComponent,
+    HeroesTarjetaComponent,
   ],
   imports: [
     CommonModule,
