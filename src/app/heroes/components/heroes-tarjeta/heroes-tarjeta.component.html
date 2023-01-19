@@ -3,7 +3,7 @@
         <mat-card-title> {{data.superhero}}</mat-card-title>
         <mat-card-subtitle>{{data.alter_ego}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="assets/heroes/{{data.id}}.jpg">
+    <img mat-card-image [src]="data | imagen">
 
     <mat-card-content>
         <h3>{{data.publisher}}</h3>
