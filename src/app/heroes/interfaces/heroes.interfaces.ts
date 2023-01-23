@@ -12,3 +12,8 @@ export enum Publisher {
   DCComics = 'DC Comics',
   MarvelComics = 'Marvel Comics',
 }
+
+export interface Login {
+  username: string;
+  password: string;
+}

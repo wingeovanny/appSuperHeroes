@@ -1,4 +1,4 @@
-import { Heroe } from './../../interfaces/heroes.interfaces';
+import { Heroe, Login } from './../../interfaces/heroes.interfaces';
 import { HeroesService } from './../../services/heroes.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,9 +12,21 @@ export class ListarComponent implements OnInit {
 
   heroes!: Array<Heroe>;
 
+  data: any;
+
   ngOnInit(): void {
-    this.servicesHeroe.getHeroes().subscribe((resp) => {
-      this.heroes = resp;
+    // this.servicesHeroe.getHeroes().subscribe((resp) => {
+    //   this.heroes = resp;
+    // });
+
+    const data: Login = {
+      username: 'admin',
+      password: '12345',
+    };
+
+    this.servicesHeroe.createlogin(data).subscribe((resp) => {
+      this.data = resp;
+      console.log(resp);
     });
   }
 }
